@@ -166,6 +166,7 @@ b {
 
 em,
 .italic,
+
 i {
     font-style: italic
 }
@@ -416,11 +417,21 @@ input:focus::-webkit-input-placeholder {
     color: transparent
 }
 
+i{
+    padding-right: 10px;
+}
+
+#profile-pic{
+    border-radius: 100%;
+    width: 120px;
+    margin-bottom: 20px;
+}
+
 /* header --------------------------  */
 
 header {
     padding: 104px 0;
-    background: url(../images/header.jpg) no-repeat 50% 50%;
+    background: url(../images/header.jpg) no-repeat center center fixed;
     font: 24px/36px "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: white;
     -moz-background-size: cover;
