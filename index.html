@@ -16,26 +16,78 @@
     <meta property="og:description" content="">
     <meta property="og:url" content="">
     <meta property="og:image" content="">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <meta name="format-detection" content="telephone=no">
     <meta name="format-detection" content="address=no">
     <link rel="stylesheet" href="css/style.css">
     <!--[if lt IE 9]>
-        <script src="js/html5.js"></script>
-        <script src="js/respond.js"></script>
+    <script src="js/html5.js"></script>
+    <script src="js/respond.js"></script>
     <![endif]-->
+    <script>
+        $(function() {
+          $('a[href*=#]:not([href=#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+              var target = $(this.hash);
+              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+              if (target.length) {
+                $('html,body').animate({
+                  scrollTop: target.offset().top
+                }, 400);
+                return false;
+              }
+            }
+          });
+        });
+    </script>
 </head>
 <body class="no-js">
-    <div class="main">
+<nav class="navbar navbar-trans navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapsible">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand text-danger" href="#">SMART CONVERTER</a>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-collapsible">
+            <ul class="nav navbar-nav navbar-left">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#info">Info</a></li>
+                <li><a href="#download">Download</a></li>
+                <li><a href="#comment">Comment</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#newsletter">Newsletter</a></li>
+                
+                <li>&nbsp;</li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="//limhenry.me">limhenry.me</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <div class="main" id="home">
         <header>
-            <div class="wrap">
+            <div class="wrap" >
                 <img src="upload/iphone.png" height="532" width="252" alt="" class="header-img" style="display:none">
                 <div class="header-wrapper">
                     <h1>Smart <span>Converter</span></h1>
-                    <p>The smartest converter which allow you converter everthing from units, currency to timezone only in a few clicks.</p>
-                    <p class="autor"><a href="#">Henry Lim</a></p>
+                    <p>The smartest converter which allow you to convert everthing from units, currency to timezone just in a few clicks.</p>
                     <div class="buttons-wrapper">
                         <a href="#" class="button">Coming Soon</a>
-                        <a href="#" class="button button-stripe">Learn more</a>
+                        <a href="#info" class="button button-stripe">Learn more</a>
                     </div>
                 </div>
                 <!-- /.header-wrapper    -->
@@ -43,47 +95,48 @@
             <!-- /.wrap -->
         </header>
         <div class="spanning">
-            <div class="promo clearfix">
+            <div class="promo clearfix" id="info">
                 <div class="wrap">
                     <div class="promo-wrapper clearfix">
                         <div class="promo-column">
                             <img src="upload/pin.png" height="32" width="24" alt="">
                             <h5>Units</h5>
-                            <p>Seamlessly empower fully researched growth strategies and interoperable internal sources.</p>
+                            <p>You can convert more than x different units in y catagories.</p>
                         </div>
                         <div class="promo-column">
                             <img src="upload/settings.png" height="32" width="33" alt="">
                             <h5>Time Zones</h5>
-                            <p>Collaboratively administrate turnkey channels whereas virtual e-tailers an other media. </p>
+                            <p>You can calculates the time difference between several locations just a few clicks.</p>
                         </div>
                         <div class="promo-column">
                             <img src="upload/easy.png" height="32" width="34" alt="">
                             <h5>Currency</h5>
-                            <p>Interactively procrastinate high-payoff content without backward-compatible data. </p>
+                            <p>You can convert the currency based on the latest exchange rates.</p>
                         </div>
                     </div>
                 </div>
                 <!-- /.wrap -->
             </div>
             <!-- /.promo clearfix -->
-            <div class="discover clearfix">
+            <div class="discover clearfix" id="download">
                 <div class="wrap">
+                    <div class="discover-img">
+                        <div class="discover-img-inside"><img src="upload/discover.png" height="486" width="634" alt=""></div>
+                    </div>                    
                     <div class="discover-content clearfix">
-                        <h2>Discover</h2>
-                        <p>Discover the best and the smartest converter in this market. This is the only software you can converter units, currency and time zones in one single software, just a few clicks. What are you waiting for? Click the Download button below to try it.</p>
+                        <h2>Download</h2>
+                        <p>Download the best and the smartest converter in this market. This is the only software you can converter units, currency and time zones in one single software, just a few clicks. What are you waiting for? Click the Download button below to try it.</p>
                         <div class="discover-button clearfix">
                             <a href="#" class="button">Coming Soon</a>
                         </div>
                     </div>
-                    <div class="discover-img">
-                        <div class="discover-img-inside"><img src="upload/discover.png" height="486" width="634" alt=""></div>
-                    </div>
+
                 </div>
                 <!-- /.wrap -->
             </div>
             <!-- /.discover clearfix -->
 
-            <div class="comments clearfix">
+            <div class="comments clearfix" id="comment">
                 <div class="wrap">
                     <div class="tab">
                         <div class="box visible">
@@ -110,8 +163,22 @@
                 <!-- /.wrap -->
             </div>
             <!-- /.comments clearfix -->
+            <div class="faq clearfix" id="faq">
+                <div class="wrap">
+                    <div class="faq-content clearfix">
+                        <h2>FAQ</h2>
+                        <p>Any questions? See the FAQ section.</p>
+                        <div class="faq-button clearfix">
+                            <a href="/faq" class="button" >FAQ</a>
+                        </div>
+                    </div>
 
-            <div class="newsletter clearfix">
+                </div>
+                <!-- /.wrap -->
+            </div>
+                <!-- /.wrap -->
+            </div>
+            <div class="newsletter clearfix" id="newsletter">
                 <div class="wrap">
                     <div class="newsletter-title">our newsletter</div>
                     <div class="newsletter-form clearfix">
@@ -133,12 +200,16 @@
     <footer>
         <div class="wrap">
             <p>Webpage created by <strong>Henry Lim</strong></p>
+            <p><a href="mailto:henrylim.everything@gmail.com?subject=smart converter" id="mail">Email me</a></p>
         </div>
         <!-- /.wrap -->
-    </footer>
+    </footer>  
+
+  
     <script src="js/jquery.js"></script>
     <script src="js/library.js"></script>
     <script src="js/script.js"></script>
     <script src="js/retina.js"></script>
+    
 </body>
 </html>
