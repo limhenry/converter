@@ -59,8 +59,8 @@ Main components
 -------------------------------- */
 header {
   position: relative;
-  height: 180px;
-  line-height: 180px;
+  height: 80px;
+  line-height: 80px;
   text-align: center;
   margin-top: 50px;
   background-color: #009688;
@@ -68,8 +68,8 @@ header {
 header h1 {
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   font-size: 20px;
+  -moz-osx-font-smoothing: grayscale;
   font-size: 1.25rem;
 }
 @media only screen and (min-width: 1024px) {
@@ -515,4 +515,18 @@ nav navbar-nav navbar-left li a:hover {
 .navbar{
 margin-bottom: 0px;
 z-index: 2;
+}
+
+.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse{
+    max-height: 400px;
+}
+
+#nav-title{
+    font-size: 15px;
+}
+
+@media (max-width:1000px) and (min-width: 768px){
+#nav-website{
+    display: none;
+}
 }
